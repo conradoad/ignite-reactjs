@@ -7,6 +7,42 @@ import {Post} from './components/Post'
 import styles from './App.module.css'
 import './global.css'
 
+// author: { avatar_url: "", name: "", role: "" }
+// publishedAt: Date
+// content: String
+
+const post = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://media-exp2.licdn.com/dms/image/C4D03AQG5_iFfkbLbjg/profile-displayphoto-shrink_800_800/0/1516232532571?e=1663804800&v=beta&t=6f0eBYGMPj5eddR7LNJi-Fjss6H8SXkVVjJ65-3EAY0",
+      name: "Conrado Costa",
+      role: "Embedded Systems Developer"
+    },
+    content: [
+      {type: "paragraph", content: "Fala galeraa 👋"},
+      {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"},
+      {type: "link", content: "jane.design/doctorcare"},
+    ],
+    publishedAt: new Date("2022-08-01 20:00:00")
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://avatars.githubusercontent.com/u/2254731?v=4",
+      name: "Diego Fernandes",
+      role: "CEO Rocketseat"
+    },
+    content: [
+      {type: "paragraph", content: "Fala galeraa 👋"},
+      {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"},
+      {type: "link", content: "jane.design/doctorcare"},
+    ],
+    publishedAt: new Date("2022-08-02 00:01:00")
+  }
+]
+
+
 export function App() {
 
   return (
@@ -19,17 +55,15 @@ export function App() {
           <Sidebar />
           
           <main>
-
-            <Post
-              author="Conrado Costa"
-              content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus consequatur vero dolore hic inventore. Sed, beatae recusandae! Tempora, veniam corporis eligendi quis ullam inventore adipisci eum rerum? Quam, voluptates!"
-            />
-            
-            <Post
-              author="Jaqueline Cantão"
-              content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus consequatur vero dolore hic inventore. Sed, beatae recusandae! Tempora, veniam corporis eligendi quis ullam inventore adipisci eum rerum? Quam, voluptates!"
-            />
-
+            {post.map(post => {
+              return (
+                <Post 
+                  author={post.author}
+                  content={post.content}
+                  publishedAt={post.publishedAt}
+                />
+              )
+            })}
           </main>
 
         </div>
