@@ -15,7 +15,7 @@ const post = [
   {
     id: 1,
     author: {
-      avatarUrl: "https://media-exp2.licdn.com/dms/image/C4D03AQG5_iFfkbLbjg/profile-displayphoto-shrink_800_800/0/1516232532571?e=1663804800&v=beta&t=6f0eBYGMPj5eddR7LNJi-Fjss6H8SXkVVjJ65-3EAY0",
+      avatarUrl: "https://avatars.githubusercontent.com/u/29844580?s=400&u=cf819c4a627fb896a0746e43943483e17adf999d&v=4",
       name: "Conrado Costa",
       role: "Embedded Systems Developer"
     },
